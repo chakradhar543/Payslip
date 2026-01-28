@@ -1,0 +1,141 @@
+/* ===== PAGE ===== */
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 25mm 20mm;
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== LOGO ===== */
+.payslip-logo-center {
+  display: flex;
+  justify-content: left;
+}
+.payslip-logo-center img {
+  height: 200px;
+}
+
+/* ===============================
+   DETAILS TABLE (TOP SECTION)
+================================ */
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  margin-bottom: 30px;
+  table-layout: fixed;
+}
+
+.details-table td {
+  padding: 8px 10px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Left + Right blocks equal */
+.details-table td.label {
+  font-weight: 600;
+  width: 18%;
+}
+.details-table td.colon {
+  width: 2%;
+  text-align: center;
+}
+.details-table td.value {
+  width: 30%;
+}
+
+/* CENTER DIVIDER – PERFECT */
+.details-table td.v-divider {
+  width: 0;
+  padding: 0;
+  border-left: 3px solid #000;
+}
+
+/* Horizontal row lines */
+.details-table tr:not(:last-child) td {
+  border-bottom: 1px solid #000;
+}
+
+/* ===============================
+   SALARY TABLE
+================================ */
+.salary-final {
+   width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  margin-bottom: 30px;
+  table-layout: fixed;
+}
+
+/* ===== HEADING TOP & BOTTOM LINE ===== */
+.salary-final thead tr {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.salary-final th {
+  padding: 10px 6px;
+  font-size: 15px;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* ===== BODY ===== */
+.salary-final td {
+  padding: 8px 6px;
+  font-size: 14px;
+}
+
+/* Dotted row separators */
+.salary-final tbody tr:not(.total-row) td {
+  border-bottom: 1px dotted #999;
+}
+
+/* ===== CENTER DIVIDER (NOT CROSSING) ===== */
+.salary-final th.v-divider,
+.salary-final td.v-divider {
+  width: 0;
+  padding: 0;
+  border-left: 3px solid #000;
+}
+
+/* ===== TOTAL ROW ===== */
+.salary-final .total-row td {
+  border-top: 2px solid #000;
+  font-weight: 700;
+}
+
+/* ===============================
+   NET SALARY
+================================ */
+.net-salary {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   PRINT SAFETY
+================================ */
+@media print {
+  body {
+    margin: 0;
+  }
+  .a4-page {
+    page-break-after: always;
+  }
+}
